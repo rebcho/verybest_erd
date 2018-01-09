@@ -1,6 +1,6 @@
 <!-- Validation failure messages -->
-<% if @dish.errors.any? %>
-  <% @dish.errors.full_messages.each do |message| %>
+<% if @neighborhood.errors.any? %>
+  <% @neighborhood.errors.full_messages.each do |message| %>
     <div class="alert alert-dismissable alert-danger">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <%= message %>
@@ -9,12 +9,12 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Add Dish</h3>
+  <h3>Add Neighborhood</h3>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <form action="/create_dish" method="post">
+    <form action="/create_neighborhood" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
@@ -24,23 +24,14 @@
           Name
         </label>
 
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @dish.name %>">
-      </div>
-
-      <!-- Label and input for cuisine_id -->
-      <div class="form-group">
-        <label for="cuisine_id" class="control-label">
-          Cuisine
-        </label>
-
-        <%= select_tag(:cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :name, @dish.cuisine_id), :class => "form-control") %>
+        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @neighborhood.name %>">
       </div>
 
       <button class="btn btn-success">
-        Create Dish
+        Create Neighborhood
       </button>
       or
-      <a href="/dishes">Cancel</a>
+      <a href="/neighborhoods">Cancel</a>
     </form>
   </div>
 </div>
