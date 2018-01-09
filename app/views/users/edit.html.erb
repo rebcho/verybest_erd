@@ -18,22 +18,13 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-      <!-- Label and input for first_name -->
+      <!-- Label and input for username -->
       <div class="form-group">
-        <label for="first_name" class="control-label">
-          First name
+        <label for="username" class="control-label">
+          Username
         </label>
 
-        <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="<%= @user.first_name %>">
-      </div>
-
-      <!-- Label and input for last_name -->
-      <div class="form-group">
-        <label for="last_name" class="control-label">
-          Last name
-        </label>
-
-        <input type="text" id="last_name" name="last_name" placeholder="Last name" class="form-control" value="<%= @user.last_name %>">
+        <input type="text" id="username" name="username" placeholder="Username" class="form-control" value="<%= @user.username %>">
       </div>
 
       <!-- Label and input for password -->
@@ -43,6 +34,15 @@
         </label>
 
         <input type="text" id="password" name="password" placeholder="Password" class="form-control" value="<%= @user.password %>">
+      </div>
+
+      <!-- Label and input for email -->
+      <div class="form-group">
+        <label for="email" class="control-label">
+          Email
+        </label>
+
+        <input type="text" id="email" name="email" placeholder="Email" class="form-control" value="<%= @user.email %>">
       </div>
 
       <button class="btn btn-warning">
