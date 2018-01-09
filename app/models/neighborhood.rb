@@ -1,9 +1,7 @@
-class Dish < ApplicationRecord
+class Neighborhood < ApplicationRecord
   # Direct associations
 
-  belongs_to :cuisine
-
-  has_many   :bookmarks,
+  has_many   :venues,
              :dependent => :destroy
 
   # Indirect associations
