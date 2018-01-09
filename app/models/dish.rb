@@ -1,7 +1,11 @@
 class Dish < ApplicationRecord
   # Direct associations
 
-  belongs_to :venue
+  has_many   :cuisines,
+             :dependent => :destroy
+
+  has_many   :bookmarks,
+             :dependent => :destroy
 
   # Indirect associations
 
