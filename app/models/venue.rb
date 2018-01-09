@@ -1,10 +1,9 @@
 class Venue < ApplicationRecord
   # Direct associations
 
-  has_many   :bookmarks,
-             :dependent => :destroy
+  belongs_to :neighborhood
 
-  has_many   :dishes,
+  has_many   :bookmarks,
              :dependent => :destroy
 
   # Indirect associations

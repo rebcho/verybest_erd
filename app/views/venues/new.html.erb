@@ -36,13 +36,13 @@
         <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @venue.address %>">
       </div>
 
-      <!-- Label and input for neighborhood -->
+      <!-- Label and input for neighborhood_id -->
       <div class="form-group">
-        <label for="neighborhood" class="control-label">
+        <label for="neighborhood_id" class="control-label">
           Neighborhood
         </label>
 
-        <input type="text" id="neighborhood" name="neighborhood" placeholder="Neighborhood" class="form-control" value="<%= @venue.neighborhood %>">
+        <%= select_tag(:neighborhood_id, options_from_collection_for_select(Neighborhood.all, :id, :name, @venue.neighborhood_id), :class => "form-control") %>
       </div>
 
       <button class="btn btn-success">
