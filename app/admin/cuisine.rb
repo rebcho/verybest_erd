@@ -1,6 +1,6 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Cuisine do
 
- permit_params :username, :password, :email
+ permit_params :name, :dish_id
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
