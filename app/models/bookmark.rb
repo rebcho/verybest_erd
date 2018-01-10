@@ -5,6 +5,8 @@ class Bookmark < ApplicationRecord
 
   belongs_to :venue
 
+  belongs_to :dish
+
   # Indirect associations
 
   # Validations

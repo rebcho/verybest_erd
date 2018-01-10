@@ -5,11 +5,11 @@
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
-      <dt>User</dt>
+      <dt>Dish</dt>
       <dd>
-        <% if @bookmark.user.present? %>
-          <a href="/users/<%= @bookmark.user_id %>">
-            <%= @bookmark.user.first_name %>
+        <% if @bookmark.dish.present? %>
+          <a href="/dishes/<%= @bookmark.dish_id %>">
+            <%= @bookmark.dish.name %>
           </a>
         <% end %>
       </dd>
@@ -19,6 +19,15 @@
         <% if @bookmark.venue.present? %>
           <a href="/venues/<%= @bookmark.venue_id %>">
             <%= @bookmark.venue.name %>
+          </a>
+        <% end %>
+      </dd>
+
+      <dt>User</dt>
+      <dd>
+        <% if @bookmark.user.present? %>
+          <a href="/users/<%= @bookmark.user_id %>">
+            <%= @bookmark.user.username %>
           </a>
         <% end %>
       </dd>
